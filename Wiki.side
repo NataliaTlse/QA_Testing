@@ -1,0 +1,172 @@
+{
+  "id": "e4773860-1bd6-4004-9b17-c0236bf29086",
+  "version": "2.0",
+  "name": "Wiki",
+  "url": "https://en.wiktionary.org",
+  "tests": [{
+    "id": "94456c10-6586-460b-a902-39493d250e7a",
+    "name": "Pear",
+    "commands": [{
+      "id": "1a2c52c6-a700-4679-94da-a6f804afec34",
+      "comment": "",
+      "command": "open",
+      "target": "/wiki/Wiktionary:Main_Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "351ac397-c3c9-458f-acc5-c55373d032db",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x740",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b11f528-7f6a-429f-84cf-a70fa91f38a4",
+      "comment": "",
+      "command": "click",
+      "target": "id=bodySearchInput0.019094398060",
+      "targets": [
+        ["id=bodySearchInput0.019094398060", "id"],
+        ["name=search", "name"],
+        ["css=#bodySearchInput0\\.019094398060", "css:finder"],
+        ["xpath=//input[@id='bodySearchInput0.019094398060']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.019094398060']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbeec206-11fc-4a89-99b0-325fbf704e31",
+      "comment": "",
+      "command": "type",
+      "target": "id=bodySearchInput0.019094398060",
+      "targets": [
+        ["id=bodySearchInput0.019094398060", "id"],
+        ["name=search", "name"],
+        ["css=#bodySearchInput0\\.019094398060", "css:finder"],
+        ["xpath=//input[@id='bodySearchInput0.019094398060']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.019094398060']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pear"
+    }, {
+      "id": "6c6e95e1-f318-4de2-96a5-ecfbc2126800",
+      "comment": "",
+      "command": "click",
+      "target": "name=go",
+      "targets": [
+        ["name=go", "name"],
+        ["css=.bodySearchWrap > .mw-ui-button", "css:finder"],
+        ["xpath=//input[@name='go']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.019094398060']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95f69989-51e7-489f-99bd-6a3e599b99e3",
+      "comment": "Definition without '. It has to pass.",
+      "command": "assertText",
+      "target": "css=ol:nth-child(13) > li:nth-child(1)",
+      "targets": [
+        ["css=ol:nth-child(13) > li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.')]", "xpath:innerText"]
+      ],
+      "value": "An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem."
+    }, {
+      "id": "e227c613-7523-4b5b-9de0-677b1ab45552",
+      "comment": "The definition literally including ' at the beginning. It has to fail.",
+      "command": "assertText",
+      "target": "css=ol:nth-child(13) > li:nth-child(1)",
+      "targets": [],
+      "value": "'An edible fruit produced by the pear tree, similar to an\\napple but elongated towards the stem."
+    }]
+  }, {
+    "id": "2694eda6-7a52-4087-81db-7db04e965c70",
+    "name": "Apple",
+    "commands": [{
+      "id": "c95f014d-c874-4856-8da8-6ebc4439e703",
+      "comment": "",
+      "command": "open",
+      "target": "/wiki/Wiktionary:Main_Page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "852ba4e3-b214-44b2-a907-4f9e16e10c8d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x740",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35f98f55-2217-430a-89bb-a2cbd6697af5",
+      "comment": "",
+      "command": "click",
+      "target": "id=bodySearchInput0.752177732947",
+      "targets": [
+        ["id=bodySearchInput0.752177732947", "id"],
+        ["name=search", "name"],
+        ["css=#bodySearchInput0\\.752177732947", "css:finder"],
+        ["xpath=//input[@id='bodySearchInput0.752177732947']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.752177732947']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0eb1ae8a-db5f-417c-a1f8-091d42da93ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=bodySearchInput0.752177732947",
+      "targets": [
+        ["id=bodySearchInput0.752177732947", "id"],
+        ["name=search", "name"],
+        ["css=#bodySearchInput0\\.752177732947", "css:finder"],
+        ["xpath=//input[@id='bodySearchInput0.752177732947']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.752177732947']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "apple"
+    }, {
+      "id": "12cd2c9e-03c2-4f68-835d-af040733813e",
+      "comment": "",
+      "command": "click",
+      "target": "name=go",
+      "targets": [
+        ["name=go", "name"],
+        ["css=.bodySearchWrap > .mw-ui-button", "css:finder"],
+        ["xpath=//input[@name='go']", "xpath:attributes"],
+        ["xpath=//form[@id='bodySearch0.752177732947']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ceca4ef9-dbcd-4ad5-b385-619e07f308ca",
+      "comment": "Apple definition recorded. Literally the definition from the web site.",
+      "command": "assertText",
+      "target": "css=ol:nth-child(12) > li:nth-child(1)",
+      "targets": [
+        ["css=ol:nth-child(12) > li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"]
+      ],
+      "value": "A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates. [from 9th c.] quotations ▼"
+    }, {
+      "id": "c61bc2ed-579f-4dd9-872a-c41317fb54fb",
+      "comment": "Literally the definition from the challenge. It has to failed",
+      "command": "assertText",
+      "target": "css=ol:nth-child(12) > li:nth-child(1)",
+      "targets": [],
+      "value": "A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates."
+    }]
+  }],
+  "suites": [{
+    "id": "8c088a97-139c-4fe1-9dc6-68e6b98413f5",
+    "name": "Searching Words",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2694eda6-7a52-4087-81db-7db04e965c70", "94456c10-6586-460b-a902-39493d250e7a"]
+  }],
+  "urls": ["https://en.wiktionary.org/"],
+  "plugins": []
+}
